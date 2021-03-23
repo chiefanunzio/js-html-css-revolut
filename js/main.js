@@ -2,15 +2,11 @@ function dropdown() {
     $('.items').hover(function () { //proviamo ad aggiungere this per selez uno solo 
         var item = $(this);
         var drop = item.find($('.drop'));
-        // var visible = drop.is(':visible');
         drop.addClass('active');
         item.next().find($('.drop')).removeClass('active');
         item.prev().find($('.drop')).removeClass('active');
 
-    });
-
-
-    // forse un po meglio ma nn mi convince
+    }); // forse un po meglio ma nn mi convince
 
 }
 
