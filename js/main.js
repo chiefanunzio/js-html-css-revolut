@@ -1,18 +1,24 @@
 function dropdown() {
-    $('.items').hover(function () { //proviamo ad aggiungere this per selez uno solo 
+    $('.items').hover(function () { 
         var item = $(this);
         var drop = item.find($('.drop'));
         drop.addClass('active');
         item.next().find('.drop').removeClass('active');
         item.prev().find('.drop').removeClass('active');
 
-    }); // forse un po meglio ma nn mi convince
+    }); 
 
+}
+
+function dropup(){
+
+    var item = $(this);
+    item.click().toggleClass('active');
 }
 
 function reset() {
 
-    $('body').click(function () {
+    $(document).click(function () {
 
         $('.drop').removeClass('active');
     })
@@ -22,7 +28,8 @@ function reset() {
 
 function init() {
 
-    dropdown()
+    dropdown();
+    dropup();
     reset();
 
 }
